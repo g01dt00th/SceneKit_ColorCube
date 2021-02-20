@@ -21,6 +21,7 @@ struct BoxView: UIViewRepresentable {
         view.scene = scene
         view.pointOfView = scene.rootNode.childNode(withName: "camera", recursively: true)
         view.allowsCameraControl = true
+        view.backgroundColor = .clear
         
         // Add gesture recognizer for planes
         let tapGesture = UITapGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.handleTap(_:)))
